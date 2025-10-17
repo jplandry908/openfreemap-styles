@@ -47,6 +47,8 @@ def cli(style_path):
         if text_field == ['to-string', ['get', 'ref']]:
             continue
 
+        # when it's a text on a line, we display both languages on a single line
+        # otherwise, we display them on two lines
         id_ = layer['id']
         if 'line' in id_ or 'highway' in id_:
             separator = ' '
